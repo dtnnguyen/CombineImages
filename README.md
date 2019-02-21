@@ -12,7 +12,8 @@ In terminal on the bottom panel of PyCharm, install these packages:
   - To parse, read and write ole file:             pip3 install olefile    
   
 ## References
-Scikit-image can also be used to manipulate images: https://scikit-image.org/download.html 
+Scikit-image can also be used to manipulate images: https://scikit-image.org/download.html
+
 ole file:                                           https://pypi.org/project/olefile/
 
 ## Finished Image
