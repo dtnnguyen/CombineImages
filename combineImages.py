@@ -1,3 +1,6 @@
+# This file contains helper functions tp assist combineImages() in pasting a drop in image
+# onto an input image.
+
 import argparse
 import uuid
 import os
@@ -61,6 +64,7 @@ def combineImages(input_image, drop_in_image):
                                       BlurrIndex.blur.value),
                            BlurrIndex.blur.value)
 
+        # Debug codes
         print("sharpen value: ", BlurrIndex.sharpen.value)
         print("blur value: ", BlurrIndex.blur.value)
 
@@ -68,9 +72,10 @@ def combineImages(input_image, drop_in_image):
         # Place the drop in picture randomly horizontally at the bottom of input image.
         x = randint(0, image.width - dropin.width)
         y = image.height - dropin.height
+
         # Combine images
         image.paste(dropin, box=(x, y), mask=dropin)
-        image.save(output_name)     #(squirrelized_path)
+        image.save(output_name)
 
 # Proceed
 input_image = args.inputFileName
